@@ -1,32 +1,9 @@
-// Difference between “int main()” and “int main(void)” in C/C++?
+#include <stdio.h>    // Header
+int main(void)        // Main
 
-int main() {
-  return 0;  //no error
+// Body
+{                     // Scope
+  printf("HEllo! I am Divyanka.");  // Statement  
+  return 0;           // Return
 }
 
-// prefer 
-int main(void) {
-  return 0;   // no error 
-}
-
-
-//main()
-#include <stdio.h> 
-int main() {
-  static int i = 5; 
-  if (--i) {
-    printf("%d", i);
-    main(10);   // No error
-  }
-}
-
-
-//main(void)
-#include <stdio.h> 
-int main(void) {
-  static int i = 5; 
-  if (--i) {
-    printf("%d", i);
-    main(10);   //this line gives error --> bcs here main has parameter void 
-  }
-}
